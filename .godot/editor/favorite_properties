@@ -1,0 +1,3 @@
+[CanvasItem]
+
+properties=PackedStringArray("texture_filter")
