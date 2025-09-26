@@ -5,6 +5,10 @@ extends MultiplayerSpawner
 func _ready() -> void:
 	multiplayer.peer_connected.connect(spawn_player)
 
+	# Спавним локального игрока для хоста сразу после старта сервера
+	if multiplayer.is_server():
+		call_deferred("spawn_player", multiplayer.get_unique_id())
+
 
 func spawn_player(id: int) -> void:
 	if !multiplayer.is_server(): return

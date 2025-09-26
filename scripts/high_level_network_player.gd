@@ -5,8 +5,12 @@ var SPRINT_MULTIPLIER: float = 3.0
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
+	# Камеру активируем только для локального владельца
+	var is_local := is_multiplayer_authority()
+	$Camera2D.enabled = is_local
+	#$Camera2D.current = is_local
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if !is_multiplayer_authority(): 
 		return
 

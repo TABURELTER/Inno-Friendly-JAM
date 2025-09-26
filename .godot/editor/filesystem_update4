@@ -1,6 +1,0 @@
-res://scenes/high_level_network_player.tscn
-res://scripts/high_level_client_ui.gd
-res://scenes/high_level_example.tscn
-res://scripts/high_level_network_player.gd
-res://scripts/high_level_player_spawner.gd
-res://scenes/high_level_ui.tscn

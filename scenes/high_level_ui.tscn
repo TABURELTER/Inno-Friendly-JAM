@@ -28,5 +28,9 @@ text = "SERVER"
 layout_mode = 2
 text = "CLIENT"
 
+[node name="cords" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "COORDS"
+
 [connection signal="pressed" from="VBoxContainer/Server" to="." method="_on_server_pressed"]
 [connection signal="pressed" from="VBoxContainer/Client" to="." method="_on_client_pressed"]

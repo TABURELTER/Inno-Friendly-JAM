@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://qdg2uk25dm1"]
+
+[ext_resource type="Script" uid="uid://bity8syjbuiip" path="res://scenes/control.gd" id="1_phokl"]
+[ext_resource type="Script" uid="uid://b7dfhb01mpwg1" path="res://scenes/button.gd" id="2_2dnko"]
+
+[node name="DebugMenu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_phokl")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 7.0
+offset_right = 1137.0
+offset_bottom = 661.0
+color = Color(0.23545289, 0.26321363, 0.4399273, 1)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 222.0
+offset_right = 462.0
+offset_bottom = 342.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2"]
+layout_mode = 2
+text = "NICKNAME"
+
+[node name="name" type="LineEdit" parent="Control/VBoxContainer2"]
+layout_mode = 2
+placeholder_text = "IP"
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer2"]
+layout_mode = 2
+text = "IP adress"
+
+[node name="ip" type="LineEdit" parent="Control/VBoxContainer2"]
+layout_mode = 2
+placeholder_text = "Игрок"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 246.0
+offset_right = 781.0
+offset_bottom = 312.0
+
+[node name="Start" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "ЗАПУСТИТЬ КАРТУ"
+script = ExtResource("2_2dnko")
+
+[node name="Connect" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "ПРИСОЕДИНИТЬСЯ К ДРУГУ"
+
+[connection signal="pressed" from="Control/VBoxContainer/Start" to="Control" method="_on_start_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Connect" to="Control" method="_on_connect_pressed"]
