@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dqp3koxevnhjm"]
+[gd_scene load_steps=23 format=3 uid="uid://bucld3fens2fs"]
 
 [ext_resource type="Script" uid="uid://c8phw0k238svi" path="res://scripts/high_level_network_player.gd" id="1_0yi72"]
 [ext_resource type="Texture2D" uid="uid://coom1wd3ewdux" path="res://assets/sprites/DinoSprites.png" id="2_jx0ca"]
@@ -160,6 +160,7 @@ animations = [{
 [node name="HighLevelNetworkPlayer" type="CharacterBody2D"]
 scale = Vector2(5, 5)
 script = ExtResource("1_0yi72")
+metadata/heal = 100
 
 [node name="Icon" type="Sprite2D" parent="."]
 visible = false
@@ -195,3 +196,5 @@ animation = &"run_fast"
 autoplay = "idle"
 frame = 3
 frame_progress = 0.8517403
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
