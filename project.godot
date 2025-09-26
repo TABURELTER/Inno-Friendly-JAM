@@ -13,6 +13,7 @@ config_version=5
 config/name="Frendly JEM"
 run/main_scene="uid://qdg2uk25dm1"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/image="uid://blrk22e2t1naw"
 config/icon="uid://b6sao7qbm41xa"
 
 [autoload]

@@ -1,8 +1,7 @@
-[gd_scene load_steps=23 format=4 uid="uid://dytxckecq42lh"]
+[gd_scene load_steps=22 format=4 uid="uid://dytxckecq42lh"]
 
 [ext_resource type="Script" uid="uid://c1g12cc12wuaa" path="res://scripts/high_level_player_spawner.gd" id="1_xa5q7"]
-[ext_resource type="PackedScene" uid="uid://dqp3koxevnhjm" path="res://scenes/high_level_network_player.tscn" id="2_cqmdx"]
-[ext_resource type="PackedScene" uid="uid://ucabdyrsn7bt" path="res://scenes/high_level_ui.tscn" id="2_evg4q"]
+[ext_resource type="PackedScene" uid="uid://bucld3fens2fs" path="res://scenes/high_level_network_player.tscn" id="2_cqmdx"]
 [ext_resource type="Texture2D" uid="uid://j0ejunskg2yc" path="res://assets/romario-tileMap/decor_16x16.png" id="4_d1wi7"]
 [ext_resource type="Texture2D" uid="uid://dfg7sullpio13" path="res://assets/romario-tileMap/Fences.png" id="5_hiags"]
 [ext_resource type="Texture2D" uid="uid://7s86ma3k2tb6" path="res://assets/romario-tileMap/grass.png" id="6_tkm7v"]
@@ -491,7 +490,7 @@ sources/8 = SubResource("TileSetAtlasSource_ecu5u")
 [node name="Players" type="Node2D" parent="."]
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("uid://dqp3koxevnhjm")
+_spawnable_scenes = PackedStringArray("uid://bucld3fens2fs")
 spawn_path = NodePath("../Players")
 script = ExtResource("1_xa5q7")
 network_player = ExtResource("2_cqmdx")
@@ -527,7 +526,4 @@ tile_set = SubResource("TileSet_4qlg4")
 use_kinematic_bodies = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="HighLevelUI" parent="CanvasLayer" instance=ExtResource("2_evg4q")]
 visible = false
